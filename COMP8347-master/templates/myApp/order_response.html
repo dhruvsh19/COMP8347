@@ -1,0 +1,9 @@
+{% extends 'myApp/base.html' %}
+
+{% block myhdg %}
+    Hello {{ request.user.first_name }}
+{% endblock %}
+
+{% block body_block %}
+    <p>{{ msg }}</p>
+{% endblock %}

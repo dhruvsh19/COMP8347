@@ -1,0 +1,16 @@
+h1 {
+    background-color: aqua;
+    color: red;
+    font-size: medium;
+    font-style: italic;
+    position: center;
+}
+
+.hbar1 {
+    display:inline;
+    margin: 15px;
+}
+
+li {
+    font-style: italic;
+}

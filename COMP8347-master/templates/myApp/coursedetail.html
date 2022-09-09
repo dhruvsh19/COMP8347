@@ -1,0 +1,21 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %}
+    Hello {{ request.user.first_name }}
+{% endblock %}
+
+{% block body_block %}
+
+    Course Name:    {{ course.name }}
+        <br/>
+    People Interested:  {{ course.interested }}
+    <br/>
+    Price:  {{ course.price }}
+    {%  if not course.for_everyone %}
+        Course is not available for all
+    {% endif %}
+    <form action="/myapp/courses/{{ course.id }}" method="post">
+       {% csrf_token %}
+       {{ form }}
+       <input type="submit" value="Submit" />
+   </form>
+{% endblock %}

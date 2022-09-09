@@ -1,0 +1,23 @@
+{% extends 'myApp/base.html' %}
+{% block myhdg %}
+    {% if request.user.first_name %}
+    Hello {{ request.user.first_name }}
+    {% endif %}
+{% endblock %}
+
+{% block body_block %}
+    {% if course_list %}
+        <ul>
+        {% for course in course_list %}
+
+            <ul> {{ course.name }}  <a href="{% url 'myApp:courses'%}/{{ course.id}}"> Interested? </a></ul>
+        {% endfor %}
+        </ul>
+        <p><a href="{% url 'myApp:place_order' %}">Book your courses here </a></p>
+
+    {% else %}
+        <p> There are no courses available this time. </p>
+    {% endif %}
+
+
+{% endblock %}

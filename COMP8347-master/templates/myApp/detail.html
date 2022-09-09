@@ -1,0 +1,17 @@
+{% extends 'myApp/base.html' %}
+
+{% block myhdg %}
+    Hello Vedang
+{% endblock %}
+
+
+{% block body_block %}
+    <p> Category is:  {{ topic_name }} </p>
+    <ul>
+        {% for course in courses %}
+            <li> {{ course.name }} : {{ course.topic }} </li>
+
+        {% endfor %}
+    </ul>
+
+{% endblock %}

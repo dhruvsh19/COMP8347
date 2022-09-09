@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+    <p> Category is:  {{ topic_name }} </p>
+    <ul>
+        {% for course in courses %}
+            <li > {{ course.name }} : {{ course.topic }} </li>
+
+        {% endfor %}
+    </ul>
+     <p>
+            <a href="{% url "myApp:index" %}">Index page</a>
+     </p>
+</body>
+</html>
